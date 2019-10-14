@@ -4,14 +4,15 @@
   "description": "various frivolous name and title generators",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch styles -o css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/calebflanagan/frivolous-generators.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "calebflanagan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/calebflanagan/frivolous-generators/issues"
