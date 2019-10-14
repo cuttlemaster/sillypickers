@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/calebflanagan/frivolous-generators/issues"
   },
-  "homepage": "https://github.com/calebflanagan/frivolous-generators#readme"
+  "homepage": "https://github.com/calebflanagan/frivolous-generators#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
 }
