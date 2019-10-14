@@ -1,7 +1,7 @@
 {
-  "name": "frivolous-generators",
+  "name": "pick-me-random",
   "version": "1.0.0",
-  "description": "various frivolous name and title generators",
+  "description": "various name and title generators",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/calebflanagan/frivolous-generators.git"
+    "url": "git+https://github.com/calebflanagan/pick-me-random.git"
   },
   "keywords": [],
   "author": "calebflanagan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/calebflanagan/frivolous-generators/issues"
+    "url": "https://github.com/calebflanagan/pick-me-random/issues"
   },
-  "homepage": "https://github.com/calebflanagan/frivolous-generators#readme",
+  "homepage": "https://github.com/calebflanagan/pick-me-random#readme",
   "dependencies": {
     "node-sass": "^4.12.0"
   }
