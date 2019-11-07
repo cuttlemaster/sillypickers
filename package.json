@@ -1,5 +1,5 @@
 {
-  "name": "pick-me-random",
+  "name": "silly-pickers",
   "version": "1.0.0",
   "description": "various name and title generators",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/calebflanagan/pick-me-random.git"
+    "url": "git+https://github.com/calebflanagan/silly-pickers.git"
   },
   "keywords": [],
   "author": "calebflanagan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/calebflanagan/pick-me-random/issues"
+    "url": "https://github.com/calebflanagan/silly-pickers/issues"
   },
-  "homepage": "https://github.com/calebflanagan/pick-me-random#readme",
+  "homepage": "https://github.com/calebflanagan/silly-pickers#readme",
   "dependencies": {
     "node-sass": "^4.12.0"
   }
