@@ -1,5 +1,15 @@
 // COLOR AND FONT VARIABLES ===============
 $background-gray: #f2f4f4;
 
+$modak: 'Modak', helvetica, sans-serif;
+$ubuntu: 'Ubuntu', arial, sans-serif;
+
 // GLOBAL ELEMENT STYLES ==================
 body { background-color: $background-gray; }
+
+// CONTAINER STYLES =======================
+.container {
+  background-color: dodgerblue;
+  margin: auto;
+  max-width: 1000px;
+}
