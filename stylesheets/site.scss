@@ -4,6 +4,7 @@
 $white: #ffffff;
 $black: #000000;
 $background: #efefef;
+$body-copy: #434343;
 $orange: #ff5722;
 
 $freckle-face: 'Freckle Face', helvetica, sans-serif;
@@ -26,4 +27,10 @@ h1 {
   text-align: center;
   // text-shadow: 1px 1px 2px $black;
   text-transform: uppercase;
+}
+
+p {
+  color: $body-copy;
+  font-size: 16px;
+  line-height: 22px;
 }
