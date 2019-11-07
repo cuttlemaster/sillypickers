@@ -3,22 +3,28 @@
 // COLOR AND FONT VARIABLES ===============
 $white: #ffffff;
 $black: #000000;
-$background-gray: #f2f4f4;
+$background: #ebedef;
 $dodgerblue: #3399ff;
 
+$freckle-face: 'Freckle Face', helvetica, sans-serif;
+
 // GLOBAL ELEMENT STYLES ==================
-body { background-color: $background-gray; }
+body { background-color: $background; }
 
 // CONTAINER STYLES =======================
 .container {
   margin: auto;
+  padding-top: 25px;
   max-width: 1000px;
 }
 
 // ELEMENT STYLES =========================
 h1 {
-  color: $black;
   background-color: $dodgerblue;
+  border-radius: 50%;
+  color: $white;
+  font-family: $freckle-face;
+  font-size: 90px;
   text-align: center;
   text-transform: uppercase;
 }
