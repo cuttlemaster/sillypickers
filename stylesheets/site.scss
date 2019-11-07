@@ -1,15 +1,24 @@
-// COLOR AND FONT VARIABLES ===============
-$background-gray: #f2f4f4;
+@import 'normalize';
 
-$modak: 'Modak', helvetica, sans-serif;
-$ubuntu: 'Ubuntu', arial, sans-serif;
+// COLOR AND FONT VARIABLES ===============
+$white: #ffffff;
+$black: #000000;
+$background-gray: #f2f4f4;
+$dodgerblue: #3399ff;
 
 // GLOBAL ELEMENT STYLES ==================
 body { background-color: $background-gray; }
 
 // CONTAINER STYLES =======================
 .container {
-  background-color: dodgerblue;
   margin: auto;
   max-width: 1000px;
+}
+
+// ELEMENT STYLES =========================
+h1 {
+  color: $black;
+  background-color: $dodgerblue;
+  text-align: center;
+  text-transform: uppercase;
 }
