@@ -6,6 +6,7 @@ $black: #000000;
 $background: #fefefe;
 $body-copy: #434343;
 $orange: #ff5722;
+$orange-hover: #ff7043;
 
 $open-sans: 'Open Sans', arial, sans-serif;
 $freckle-face: 'Freckle Face', helvetica, sans-serif;
@@ -38,11 +39,36 @@ p {
   &.introduction {
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 25px;
     font-family: $freckle-face;
     font-size: 24px;
-    font-weight: 600;
     line-height: 30px;
     text-align: center;
     width: 650px;
+  }
+}
+
+button {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-right: 35px;
+  padding-bottom: 10px;
+  padding-left: 35px;
+  background-color: $white;
+  border: 2px solid $orange;
+  border-radius: 25px;
+  color: $orange;
+  font-family: $open-sans;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $orange;
+    color: $white;
+    cursor: pointer;
   }
 }
