@@ -22,7 +22,6 @@ body { background-color: $background; }
 }
 
 // ELEMENT STYLES =========================
-// INPUT STYLES ===========================
 h1 {
   color: $orange;
   font-family: $freckle-face;
@@ -31,11 +30,22 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  padding-bottom: 25px;
+  color: $orange;
+  font-family: $freckle-face;
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 p {
   color: $body-copy;
   font-family: $open-sans;
   font-size: 16px;
+  font-weight: 600;
   line-height: 22px;
+  text-align: center;
 
   &.introduction {
     margin-right: auto;
@@ -44,8 +54,12 @@ p {
     font-family: $freckle-face;
     font-size: 24px;
     line-height: 30px;
-    text-align: center;
+    // text-align: center;
     width: 650px;
+  }
+
+  &.result-intro {
+    padding-top: 25px;
   }
 }
 
@@ -75,10 +89,22 @@ button {
 }
 
 // INPUT STYLES ===========================
+.input-container {
+  padding-top: 25px;
+
+  section {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
 label {
   display: inline-block;
+  padding-top: 6px;
   padding-bottom: 10px;
-  padding-right: 5px;
+  padding-right: 15px;
   color: $body-copy;
   font-family: $freckle-face;
   font-size: 24px;
@@ -102,7 +128,7 @@ select {
     min-width: 75px;
     max-width: 300px;
     box-sizing: border-box;
-    margin: 0 auto 0 auto;
+    // margin: 0 auto 0 auto;
     border: 1px solid #aaa;
     box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
     border-radius: .5em;
