@@ -2,23 +2,23 @@ const romanceNovel = {
   questions: [
     {
       label: "First Letter of Your Last Name:",
-      attribute: "question1",
-      dropdown: "alphabet"
+      dropdown: "alphabet",
+      attribute: "1"
     },
     {
       label: "Second Letter of Your Last Name:",
-      attribute: "question2",
-      dropdown: "alphabet"
+      dropdown: "alphabet",
+      attribute: "2"
     },
     {
       label: "Third Letter of Your Last Name:",
-      attribute: "question3",
-      dropdown: "alphabet"
+      dropdown: "alphabet",
+      attribute: "3"
     },
     {
       label: "Fourth Letter of Your Last Name:",
-      attribute: "question4",
-      dropdown: "alphabet"
+      dropdown: "alphabet",
+      attribute: "4"
     }
   ],
   answers: {
@@ -27,28 +27,112 @@ const romanceNovel = {
       b: "Dangerous",
       c: "Renegade",
       d: "Wayward",
-      e: "Wicked"
+      e: "Wicked",
+      f: "Aristocratic",
+      g: "Rogue",
+      h: "Bad-boy",
+      i: "Widowed",
+      j: "Royal",
+      k: "Shameless",
+      l: "Enigmatic",
+      m: "Arrogant",
+      n: "Proud",
+      o: "Sinful",
+      p: "Restless",
+      q: "Single",
+      r: "Brooding",
+      s: "Untamed",
+      t: "Tormented",
+      u: "Unforgiving",
+      v: "Disgraced",
+      w: "Wicked",
+      x: "Unexpected",
+      y: "Rich",
+      z: "Wild"
     },
     question2: {
       a: "Texan",
       b: "Earl",
       c: "Doctor",
       d: "Soldier",
-      e: "Maverick"
+      e: "Maverick",
+      f: "Pirate",
+      g: "Sheriff",
+      h: "Italian",
+      i: "Oil Baron",
+      j: "Greek",
+      k: "Spaniard",
+      l: "Tycoon",
+      m: "Brazilian",
+      n: "Millionaire",
+      o: "Count",
+      p: "Sheikh",
+      q: "Prince",
+      r: "Billionaire",
+      s: "Bachelor",
+      t: "Boss",
+      u: "Playboy",
+      v: "Scot",
+      w: "Cowboy",
+      x: "Laird",
+      y: "Rake",
+      z: "Loner"
     },
     question3: {
       a: "Runaway",
       b: "Disobedient",
       c: "Inherited",
       d: "Reluctant",
-      e: "Chosen"
+      e: "Chosen",
+      f: "Inexperienced",
+      g: "Pregnant",
+      h: "Forgotten",
+      i: "Virginal",
+      j: "Untouched",
+      k: "One-Night",
+      l: "Hidden",
+      m: "Accidental",
+      n: "Forbidden",
+      o: "Burning",
+      p: "Captive",
+      q: "Desert",
+      r: "Scandalous",
+      s: "Defiant",
+      t: "Secret",
+      u: "Inconvenient",
+      v: "Purchased",
+      w: "Innocent",
+      x: "Holiday",
+      y: "Red-Hot",
+      z: "Convenient"
     },
     question4: {
       a: "Affair",
       b: "Surprise",
       c: "Heiress",
       d: "Proposal",
-      e: "Princess"
+      e: "Princess",
+      f: "Pleasure",
+      g: "Housekeeper",
+      h: "Prize",
+      i: "Debt",
+      j: "Passion",
+      k: "Conquest",
+      l: "Vow",
+      m: "Consequence",
+      n: "Wife",
+      o: "Indulgence",
+      p: "Blackmail",
+      q: "Revenge",
+      r: "Mistress",
+      s: "Trophy",
+      t: "Bride",
+      u: "Dalliance",
+      v: "Bargain",
+      w: "Marriage",
+      x: "Bedroom",
+      y: "Maid",
+      z: "Wedding"
     }
   }
 }
