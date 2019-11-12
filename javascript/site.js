@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  const body = document.querySelector('body');
+
   // STORING ALL THE RELEVANT BUTTONS FOR USE ========== //
   const randomChoiceBtn = document.querySelector('.random-choice');
   const showMeBtn = document.querySelector('.show-me');
