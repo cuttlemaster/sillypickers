@@ -3,22 +3,26 @@ const romanceNovelTitle = {
     {
       label: "First Letter of Your Last Name:",
       dropdown: "alphabetBuilder",
-      attribute: "1"
+      identifier: "alphabet",
+      increment: "1"
     },
     {
       label: "Second Letter of Your Last Name:",
       dropdown: "alphabetBuilder",
-      attribute: "2"
+      identifier: "alphabet",
+      increment: "2"
     },
     {
       label: "Third Letter of Your Last Name:",
       dropdown: "alphabetBuilder",
-      attribute: "3"
+      identifier: "alphabet",
+      increment: "3"
     },
     {
       label: "Fourth Letter of Your Last Name:",
       dropdown: "alphabetBuilder",
-      attribute: "4"
+      identifier: "alphabet",
+      increment: "4"
     }
   ],
   answers: {

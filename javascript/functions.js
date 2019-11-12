@@ -52,10 +52,32 @@ const buildMyPicker = (chosenPicker) => {
   // ADD THE CREATED INPUT CONTAINER TO THE PAGE
   pageContainer.appendChild(inputContainer);
 
+  chosenPicker.questions.forEach((question) => {
+    // CREATE A NEW SECTION ELEMENT TO HOLD THE LABEL AND INPUT
+    const newSection = document.createElement('section');
 
+    // CREATE A NEW LABEL AND GIVE IT ATTRIBUTES AND CONTENT
+    const newLabel = document.createElement('label');
+    newLabel.setAttribute('for', `${question.identifier}${question.increment}`);
+    newLabel.textContent = question.label;
 
+    // CREATE A NEW SELECT AND GIVE IT CLASSES AND A UNIQUE NAME
+    const newSelect = document.createElement('select');
+    newSelect.classList.add('custom');
+    newSelect.classList.add(`${question.identifier}${question.increment}`);
+    newSelect.setAttribute('name', `${question.identifier}${question.increment}`);
 
+    // GENERATE THE OPTION ELEMENTS BY REFERENCING A BUILDER FUNCTION ABOVE
+    // NAME OF BUILDER FUNCTION COMES FROM THE DATA FILE FOR THE SELECTED PICKER
+    const dropdown = question.dropdown;
+    const builtDropdown = dropdown(`${question.identifier}${question.increment}`);
 
+    // APPEND ELEMENTS IN THE CORRECT ORDER
+    newSelect.appendChild(builtDropdown);
+    newSection.appendChild(newLabel);
+    newSection.appendChild(newSelect);
+    inputContainer.appendChild(newSection);
+  });
 
   console.log(chosenPicker);
 };
