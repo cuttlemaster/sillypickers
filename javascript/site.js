@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // const randomNumber = getRandomNumber();
     const randomNumber = 0;
     const chosenPicker = availablePickers[randomNumber];
+    console.log(chosenPicker);
     buildMyPicker(chosenPicker);
   });
 
