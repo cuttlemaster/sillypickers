@@ -25,5 +25,4 @@ document.addEventListener("DOMContentLoaded", () => {
     randomChoiceBtn.classList.remove('hide');
   });
 
-  console.log(questionAnswerObject.answers.question1.a);
 });

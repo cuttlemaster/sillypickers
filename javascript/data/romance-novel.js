@@ -1,4 +1,4 @@
-const questionAnswerObject = {
+const romanceNovel = {
   questions: [
     {
       label: "First Letter of Your Last Name:",
