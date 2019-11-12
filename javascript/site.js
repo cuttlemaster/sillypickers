@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  console.log(romanceNovelTitle);
+
   // STORING ALL THE RELEVANT BUTTONS FOR USE ========== //
   const randomChoiceBtn = document.querySelector('.random-choice');
   const pickMyOwnBtn = document.querySelector('.pick-my-own');
@@ -18,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // const randomNumber = getRandomNumber();
     const randomNumber = 0;
     const chosenPicker = availablePickers[randomNumber];
-    console.log(chosenPicker);
+    //console.log(chosenPicker);
     buildMyPicker(chosenPicker);
   });
 

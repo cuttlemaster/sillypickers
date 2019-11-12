@@ -40,6 +40,7 @@ const alphabetBuilder = (parentElement) => {
 // NEEDS TO BE AT THE BOTTOM OF THE LIST SO IT CAN REFERENCE
 // ADDITIONAL BUILD FUNCTIONS ABOVE IN THE FILE
 const buildMyPicker = (chosenPicker) => {
+  console.log(chosenPicker);
   const pageContainer = document.querySelector('.container');
 
   // CREATE INPUT CONTAINER AND ADD THE INTRODUCTION PARAGRAPH ABOVE INPUTS
