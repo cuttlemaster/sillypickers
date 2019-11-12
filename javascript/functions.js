@@ -35,3 +35,27 @@ const alphabetBuilder = (parentElement) => {
   // ADD THE DROPDOWN TO THE PAGE
   container.appendChild(newSelect);
 };
+
+// BUILD THE CHOSEN PICKER WITH ALL OF ITS BITS AND PIECES
+// NEEDS TO BE AT THE BOTTOM OF THE LIST SO IT CAN REFERENCE
+// ADDITIONAL BUILD FUNCTIONS ABOVE IN THE FILE
+const buildMyPicker = (chosenPicker) => {
+  const pageContainer = document.querySelector('.container');
+
+  // CREATE INPUT CONTAINER AND ADD THE INTRODUCTION PARAGRAPH ABOVE INPUTS
+  const inputContainer = document.createElement('div');
+  inputContainer.classList.add('input-container');
+  const introParagraph = document.createElement('p');
+  introParagraph.textContent = 'First, let\'s gather a few bits of information...';
+  inputContainer.appendChild(introParagraph);
+
+  // ADD THE CREATED INPUT CONTAINER TO THE PAGE
+  pageContainer.appendChild(inputContainer);
+
+
+
+
+
+
+  console.log(chosenPicker);
+};

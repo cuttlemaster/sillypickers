@@ -6,23 +6,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const resetBtn = document.querySelector('.reset');
 
   // STORING THE RELEVANT PAGE CONTAINERS FOR USE ========== //
-  const inputContainer = document.querySelector('.input-container');
+  // const inputContainer = document.querySelector('.input-container');
   const resultContainer = document.querySelector('.result-container');
 
   // SELECT A RANDOM GENERATOR FROM THE AVAILABLE LIST WHEN THE
   // "GIVE ME SOMETHING RANDOM!" BUTTON IS CLICKED BY THE USER
   randomChoiceBtn.addEventListener('click', () => {
     randomChoiceBtn.classList.add('hide');    // HIDE THE RANDOM CHOICE BUTTON
-    inputContainer.classList.remove('hide');  // SHOW THE DEFAULT CONTAINER FOR ADDING INPUTS
+    pickMyOwnBtn.classList.add('hide');       // HIDE THE PICK MY OWN BUTTON
 
     // const randomNumber = getRandomNumber();
     const randomNumber = 0;
     const chosenPicker = availablePickers[randomNumber];
-    console.log(chosenPicker);
+    buildMyPicker(chosenPicker);
   });
 
   pickMyOwnBtn.addEventListener('click', () => {
-    inputContainer.classList.add('hide');
+    // inputContainer.classList.add('hide');
     resultContainer.classList.remove('hide');
   });
 
