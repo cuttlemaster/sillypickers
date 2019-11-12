@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const body = document.querySelector('body');
-
   // STORING ALL THE RELEVANT BUTTONS FOR USE ========== //
   const randomChoiceBtn = document.querySelector('.random-choice');
   const showMeBtn = document.querySelector('.show-me');
@@ -11,18 +9,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputContainer = document.querySelector('.input-container');
   const resultContainer = document.querySelector('.result-container');
 
-  // DEALING WITH THE DIFFERENT BUTTONS GETTING CLICKED ==========/
+  // SELECT A RANDOM GENERATOR FROM THE AVAILABLE LIST WHEN THE
+  // "GIVE ME SOMETHING RANDOM!" BUTTON IS CLICKED BY THE USER
   randomChoiceBtn.addEventListener('click', () => {
-    inputContainer.classList.remove('hide');
-    randomChoiceBtn.classList.add('hide');
+    randomChoiceBtn.classList.add('hide');    // HIDE THE RANDOM CHOICE BUTTON
+    inputContainer.classList.remove('hide');  // SHOW THE DEFAULT CONTAINER FOR ADDING INPUTS
 
-    const generatorChoice = getRandomNumber();
+    // const randomNumber = getRandomNumber();
+    const randomNumber = 0;
+    const chosenGenerator = generators[randomNumber];
+    console.log(chosenGenerator);
   });
 
-  showMeBtn.addEventListener('click', () => {
-    inputContainer.classList.add('hide');
-    resultContainer.classList.remove('hide');
-  });
+  // showMeBtn.addEventListener('click', () => {
+  //   inputContainer.classList.add('hide');
+  //   resultContainer.classList.remove('hide');
+  // });
 
   resetBtn.addEventListener('click', () => {
     resultContainer.classList.add('hide');
