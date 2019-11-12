@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // STORING ALL THE RELEVANT BUTTONS FOR USE ========== //
   const randomChoiceBtn = document.querySelector('.random-choice');
-  const showMeBtn = document.querySelector('.show-me');
+  const pickMyOwnBtn = document.querySelector('.pick-my-own');
   const resetBtn = document.querySelector('.reset');
 
   // STORING THE RELEVANT PAGE CONTAINERS FOR USE ========== //
@@ -17,14 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // const randomNumber = getRandomNumber();
     const randomNumber = 0;
-    const chosenGenerator = generators[randomNumber];
-    console.log(chosenGenerator);
+    const chosenPicker = availablePickers[randomNumber];
+    console.log(chosenPicker);
   });
 
-  // showMeBtn.addEventListener('click', () => {
-  //   inputContainer.classList.add('hide');
-  //   resultContainer.classList.remove('hide');
-  // });
+  pickMyOwnBtn.addEventListener('click', () => {
+    inputContainer.classList.add('hide');
+    resultContainer.classList.remove('hide');
+  });
 
   resetBtn.addEventListener('click', () => {
     resultContainer.classList.add('hide');

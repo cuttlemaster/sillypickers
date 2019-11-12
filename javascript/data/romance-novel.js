@@ -1,23 +1,23 @@
-const romanceNovel = {
+const romanceNovelTitle = {
   questions: [
     {
       label: "First Letter of Your Last Name:",
-      dropdown: "alphabet",
+      dropdown: "alphabetBuilder",
       attribute: "1"
     },
     {
       label: "Second Letter of Your Last Name:",
-      dropdown: "alphabet",
+      dropdown: "alphabetBuilder",
       attribute: "2"
     },
     {
       label: "Third Letter of Your Last Name:",
-      dropdown: "alphabet",
+      dropdown: "alphabetBuilder",
       attribute: "3"
     },
     {
       label: "Fourth Letter of Your Last Name:",
-      dropdown: "alphabet",
+      dropdown: "alphabetBuilder",
       attribute: "4"
     }
   ],

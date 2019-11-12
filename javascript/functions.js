@@ -1,4 +1,4 @@
-const generators = ["romance-novel-title"];
+const availablePickers = ["romanceNovelTitle"];
 
 const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 const months = ["january","february","march","april","may","june","july","august","september","october","november","december"];
@@ -32,7 +32,6 @@ const alphabetBuilder = (parentElement) => {
     newOption.textContent = value.toUpperCase();
     newSelect.appendChild(newOption);
   });
-
   // ADD THE DROPDOWN TO THE PAGE
   container.appendChild(newSelect);
 };
