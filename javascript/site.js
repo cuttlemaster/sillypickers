@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
   randomChoiceBtn.addEventListener('click', () => {
     inputContainer.classList.remove('hide');
     randomChoiceBtn.classList.add('hide');
+
+    const generatorChoice = getRandomNumber();
   });
 
   showMeBtn.addEventListener('click', () => {
