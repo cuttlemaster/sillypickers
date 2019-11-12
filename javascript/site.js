@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // STORING ALL THE RELEVANT BUTTONS FOR USE ========== //
   const randomChoiceBtn = document.querySelector('.random-choice');
-  const pickMyOwnBtn = document.querySelector('.pick-my-own');
   const showMeBtn = document.querySelector('.show-me');
   const resetBtn = document.querySelector('.reset');
 
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   randomChoiceBtn.addEventListener('click', () => {
     inputContainer.classList.remove('hide');
     randomChoiceBtn.classList.add('hide');
-    pickMyOwnBtn.classList.add('hide');
   });
 
   showMeBtn.addEventListener('click', () => {
@@ -25,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   resetBtn.addEventListener('click', () => {
     resultContainer.classList.add('hide');
     randomChoiceBtn.classList.remove('hide');
-    pickMyOwnBtn.classList.remove('hide');
   });
 
+  console.log(questionAnswerObject.answers.question1.a);
 });
