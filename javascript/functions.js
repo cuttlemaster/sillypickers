@@ -14,15 +14,10 @@ const alphabetBuilder = (parentElement) => {
   // SET CONTAINING ELEMENT TO WHATEVER IS PASSED INTO FUNCTION
   const container = document.querySelector(`.${parentElement}`);
 
-  // CREATE NEW SELECT ELEMENT AND PROVIDE CLASS/NAME VALUES
-  const newSelect = document.createElement('select');
-  newSelect.classList.add('alphabet');
-  newSelect.setAttribute('name', 'alphabet');
-
   // ADD BLANK OPTION ELEMENT TO TOP OF DROPDOWN
   const blankOption = document.createElement('option');
   blankOption.textContent = '--';
-  newSelect.appendChild(blankOption);
+  container.appendChild(blankOption);
 
   // LOOP THROUGH ALPHABET ARRAY AND CREATE OPTION ELEMENTS
   // ADD THE OPTION ELEMENT TO THE SELECT DROPDOWN
@@ -30,55 +25,56 @@ const alphabetBuilder = (parentElement) => {
     const newOption = document.createElement('option');
     newOption.value = value;
     newOption.textContent = value.toUpperCase();
-    newSelect.appendChild(newOption);
+    container.appendChild(newOption);
   });
-  // ADD THE DROPDOWN TO THE PAGE
-  container.appendChild(newSelect);
 };
 
 // BUILD THE CHOSEN PICKER WITH ALL OF ITS BITS AND PIECES
 // NEEDS TO BE AT THE BOTTOM OF THE LIST SO IT CAN REFERENCE
 // ADDITIONAL BUILD FUNCTIONS ABOVE IN THE FILE
 const buildMyPicker = (chosenPicker) => {
-  console.log(chosenPicker);
-  const pageContainer = document.querySelector('.container');
 
-  // CREATE INPUT CONTAINER AND ADD THE INTRODUCTION PARAGRAPH ABOVE INPUTS
-  const inputContainer = document.createElement('div');
-  inputContainer.classList.add('input-container');
-  const introParagraph = document.createElement('p');
-  introParagraph.textContent = 'First, let\'s gather a few bits of information...';
-  inputContainer.appendChild(introParagraph);
+  fetch(`/javascript/data/${chosenPicker}.json`)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      const pageContainer = document.querySelector('.container');
 
-  // ADD THE CREATED INPUT CONTAINER TO THE PAGE
-  pageContainer.appendChild(inputContainer);
+      // CREATE INPUT CONTAINER AND ADD THE INTRODUCTION PARAGRAPH ABOVE INPUTS
+      const inputContainer = document.createElement('div');
+      inputContainer.classList.add('input-container');
+      const introParagraph = document.createElement('p');
+      introParagraph.textContent = 'First, let\'s gather a few bits of information...';
+      inputContainer.appendChild(introParagraph);
 
-  chosenPicker.questions.forEach((question) => {
-    // CREATE A NEW SECTION ELEMENT TO HOLD THE LABEL AND INPUT
-    const newSection = document.createElement('section');
+      // ADD THE CREATED INPUT CONTAINER TO THE PAGE
+      pageContainer.appendChild(inputContainer);
 
-    // CREATE A NEW LABEL AND GIVE IT ATTRIBUTES AND CONTENT
-    const newLabel = document.createElement('label');
-    newLabel.setAttribute('for', `${question.identifier}${question.increment}`);
-    newLabel.textContent = question.label;
+      data.questions.forEach((question) => {
+        // CREATE A NEW SECTION ELEMENT TO HOLD THE LABEL AND INPUT
+        const newSection = document.createElement('section');
 
-    // CREATE A NEW SELECT AND GIVE IT CLASSES AND A UNIQUE NAME
-    const newSelect = document.createElement('select');
-    newSelect.classList.add('custom');
-    newSelect.classList.add(`${question.identifier}${question.increment}`);
-    newSelect.setAttribute('name', `${question.identifier}${question.increment}`);
+        // CREATE A NEW LABEL AND GIVE IT ATTRIBUTES AND CONTENT
+        const newLabel = document.createElement('label');
+        newLabel.setAttribute('for', `${question.identifier}${question.increment}`);
+        newLabel.textContent = question.label;
 
-    // GENERATE THE OPTION ELEMENTS BY REFERENCING A BUILDER FUNCTION ABOVE
-    // NAME OF BUILDER FUNCTION COMES FROM THE DATA FILE FOR THE SELECTED PICKER
-    const dropdown = question.dropdown;
-    const builtDropdown = dropdown(`${question.identifier}${question.increment}`);
+        // CREATE A NEW SELECT AND GIVE IT CLASSES AND A UNIQUE NAME
+        const newSelect = document.createElement('select');
+        newSelect.classList.add('custom');
+        newSelect.classList.add(`${question.identifier}${question.increment}`);
+        newSelect.setAttribute('name', `${question.identifier}${question.increment}`);
 
-    // APPEND ELEMENTS IN THE CORRECT ORDER
-    newSelect.appendChild(builtDropdown);
-    newSection.appendChild(newLabel);
-    newSection.appendChild(newSelect);
-    inputContainer.appendChild(newSection);
+        // APPEND ELEMENTS IN THE CORRECT ORDER
+        newSection.appendChild(newLabel);
+        newSection.appendChild(newSelect);
+        inputContainer.appendChild(newSection);
+
+        // GENERATE THE OPTION ELEMENTS BY REFERENCING A BUILDER FUNCTION ABOVE
+        // NAME OF BUILDER FUNCTION COMES FROM THE DATA FILE FOR THE SELECTED PICKER
+        const dropdown = question.dropdown;
+        eval(dropdown)(`${question.identifier}${question.increment}`);
+      });
   });
-
-  console.log(chosenPicker);
 };

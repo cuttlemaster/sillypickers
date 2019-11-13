@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  console.log(romanceNovelTitle);
+  // console.log(romanceNovelTitle);
 
   // STORING ALL THE RELEVANT BUTTONS FOR USE ========== //
   const randomChoiceBtn = document.querySelector('.random-choice');
