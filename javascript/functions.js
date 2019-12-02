@@ -30,15 +30,14 @@ const alphabetBuilder = (parentElement) => {
 };
 
 // BUILD THE CHOSEN PICKER WITH ALL OF ITS BITS AND PIECES
-// NEEDS TO BE AT THE BOTTOM OF THE LIST SO IT CAN REFERENCE
-// ADDITIONAL BUILD FUNCTIONS ABOVE IN THE FILE
+// NEEDS TO BE AT THE BOTTOM OF THE LIST SO IT CAN REFERENCE ADDITIONAL BUILD FUNCTIONS ABOVE IN THE FILE
 const buildMyPicker = (chosenPicker) => {
 
-  fetch(`/javascript/data/${chosenPicker}.json`)
-    .then(function (response) {
-      return response.json();
+  fetch(`/javascript/data/${chosenPicker}.json`) // GO GET THE DESIRED JSON FILE
+    .then(function (data) { // PASS FILE INTO PROMISE AS 'data'
+      return data.json(); // CONVERT FROM INITIAL STRING INTO JSON
     })
-    .then(function (data) {
+    .then(function (json) { // PASS JSON INTO PROMISE AS 'json'
       const pageContainer = document.querySelector('.container');
 
       // CREATE INPUT CONTAINER AND ADD THE INTRODUCTION PARAGRAPH ABOVE INPUTS
@@ -51,7 +50,7 @@ const buildMyPicker = (chosenPicker) => {
       // ADD THE CREATED INPUT CONTAINER TO THE PAGE
       pageContainer.appendChild(inputContainer);
 
-      data.questions.forEach((question) => {
+      json.questions.forEach((question) => {
         // CREATE A NEW SECTION ELEMENT TO HOLD THE LABEL AND INPUT
         const newSection = document.createElement('section');
 
