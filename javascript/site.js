@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // STORING ALL THE RELEVANT BUTTONS FOR USE ========== //
   const randomChoiceBtn = document.querySelector('.random-choice');
   const pickMyOwnBtn = document.querySelector('.pick-my-own');
+  const resetBtn = document.querySelector('.reset');
+
+  // STORING ALL RELEVANT CONTAINERS FOR USE ========== //
+  const questionContainer = document.querySelector('.question-container');
+  const resultContainer = document.querySelector('.result-container');
+  const answerContainer = document.querySelector('.answer-container');
 
   // "GIVE ME SOMETHING RANDOM!" BUTTON IS CLICKED BY THE USER
   randomChoiceBtn.addEventListener('click', () => {
@@ -20,21 +26,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const showMeBtn = document.querySelector('.show-me');
   showMeBtn.addEventListener('click', () => {
     // GRAB THE NAME OF THE PICKER AND STORE IT TO PASS INTO FUNCTION
-    const sectionContainer = document.querySelector('.section-container');
-    const picker = sectionContainer.dataset.name;
-    console.log(`the picker name is: ${picker}`);
+    const questionContainer = document.querySelector('.question-container');
+    const picker = questionContainer.dataset.name;
 
     // GRAB THE QUESTION ANSWER VALUES AND STORE THEM IN AN ARRAY
     const questions = document.querySelectorAll('.question');
-    const answers = [];
+    const selections = [];
 
     questions.forEach((question) => {
-      answers.push(question.value)
+      selections.push(question.value)
     });
 
-    console.log(answers);
-
     // PASS APPROPRIATE VALUES INTO RESULTS FUNCTION
-    showMyResults(picker, answers);
+    showMyResults(picker, selections);
+  });
+
+  // RESET THE PICKER INTERFACE WHEN "LET'S GO AGAIN" IS CLICKED
+  resetBtn.addEventListener('click', () => {
+    // REMOVES ALL CHILDREN OF THE PARENT ANSWERS SECTION WHILE THEY EXIST
+    while(answerContainer.firstChild) {
+      answerContainer.removeChild(answerContainer.firstChild);
+    }
+
+    // REMOVES ALL CHILDEN OF THE PARENT QUESTION CONTAINER WHILE THEY EXIST
+    while(questionContainer.firstChild) {
+      questionContainer.removeChild(questionContainer.firstChild);
+    }
+
+    resultContainer.classList.add('hide');
+    randomChoiceBtn.classList.remove('hide');
+    pickMyOwnBtn.classList.remove('hide');
   });
 });

@@ -32,14 +32,13 @@ const alphabetBuilder = (parentElement) => {
 // BUILD THE CHOSEN PICKER WITH ALL OF ITS BITS AND PIECES
 // NEEDS TO BE AT THE BOTTOM OF THE LIST SO IT CAN REFERENCE ADDITIONAL BUILD FUNCTIONS ABOVE IN THE FILE
 const buildMyPicker = (chosenPicker) => {
-
   fetch(`/javascript/data/${chosenPicker}.json`) // GO GET THE DESIRED JSON FILE
     .then(function (data) { // PASS FILE INTO PROMISE AS 'data'
       return data.json(); // CONVERT FROM INITIAL STRING INTO JSON
     })
     .then(function (json) { // PASS JSON INTO PROMISE AS 'json' (MANIPULATE FROM HERE)
       const inputContainer = document.querySelector('.input-container');
-      const sectionContainer = document.querySelector('.section-container');
+      const questionContainer = document.querySelector('.question-container');
 
       // REVEAL THE INPUT CONTAINER THAT WAS HIDDEN ON PAGE LOAD
       inputContainer.classList.remove('hide');
@@ -64,7 +63,10 @@ const buildMyPicker = (chosenPicker) => {
         // APPEND ELEMENTS IN THE CORRECT ORDER
         newSection.appendChild(newLabel);
         newSection.appendChild(newSelect);
-        sectionContainer.appendChild(newSection);
+        questionContainer.appendChild(newSection);
+
+        // ADD THE PICKER NAME TO THE SECTION CONTAINER
+        questionContainer.dataset.name = chosenPicker;
 
         // GENERATE THE OPTION ELEMENTS BY REFERENCING A BUILDER FUNCTION ABOVE
         // NAME OF BUILDER FUNCTION COMES FROM THE DATA FILE FOR THE SELECTED PICKER
@@ -76,11 +78,11 @@ const buildMyPicker = (chosenPicker) => {
 
 
 // GATHER AND SHOW RESULTS AFTER SELECTIONS ARE MADE BY THE USER ========== //
-const showMyResults = (picker, answers) => {
+const showMyResults = (picker, selections) => {
   // STORE RELEVANT CONTAINERS FOR MANIPULATION AS NEEDED
   const inputContainer = document.querySelector('.input-container');
   const resultContainer = document.querySelector('.result-container');
-  const answerSection = document.querySelector('.result-container section');
+  const answerContainer = document.querySelector('.answer-container');
 
   // SHOW AND HIDE THE RELEVANT CONTAINERS
   inputContainer.classList.add('hide');
@@ -91,20 +93,35 @@ const showMyResults = (picker, answers) => {
       return data.json(); // CONVERT FROM INITIAL STRING INTO JSON
     })
     .then(function (json) { // PASS JSON INTO PROMISE AS 'json' (MANIPULATE FROM HERE)
-      // CALCULATE AND STORE THE TOTAL NUMBER OF QUESTIONS FROM THE PICKER
       const numberOfQuestions = json.questions.length;
 
-      // PROVIDE AN EMPTY ARRAY FOR THE ANSWER VALUES AND PUSH THEM VIA LOOP
-      let answerText = [];
+      const finalAnswer = document.createElement('h2');
+      finalAnswer.classList.add('final-answer');
+
+      const answerIntro = document.createElement('p');
+      answerIntro.classList.add('underline-intro');
+      answerIntro.textContent = json.introduction;
+
+      // PROVIDE AN EMPTY ARRAY FOR THE ANSWER VALUES AND PUSH THEM INTO IT VIA LOOP
+      let answersArray = [];
       for(let i = 0; i < numberOfQuestions; i++) {
-        answerText.push(json.questions[i].answers[answers[i]]);
+        answersArray.push(json.questions[i].answers[selections[i]]);
       }
 
-      // CREATE THE FINAL ANSWER STRING TO OUTPUT TO THE PAGE
-      const answerString = `The ${answerText[0]} ${answerText[1]}'s ${answerText[2]} ${answerText[3]}`;
-      const finalAnswer = document.createElement('h2');
-      finalAnswer.textContent = answerString;
-      answerSection.appendChild(finalAnswer);
+      // DETERMINE THE FULL STRING OF THE FINAL ANSWER DEPENDENT ON THE PICKER USED
+      switch(picker) {
+        case "romanceNovelTitle":
+          const answerString = `The ${answersArray[0]} ${answersArray[1]}'s ${answersArray[2]} ${answersArray[3]}`;
+          finalAnswer.textContent = answerString;
+        break;
+
+        case "default":
+        break;
+      }
+
+      // APPLY THE ANSWER TO THE PAGE
+      answerContainer.appendChild(answerIntro);
+      answerContainer.appendChild(finalAnswer);
     });
 };
 
