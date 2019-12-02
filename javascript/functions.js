@@ -77,6 +77,11 @@ const buildMyPicker = (chosenPicker) => {
 
 // GATHER AND SHOW RESULTS AFTER SELECTIONS ARE MADE BY THE USER ========== //
 const showMyResults = (picker, answers) => {
+  // STORE RELEVANT CONTAINERS FOR MANIPULATION AS NEEDED
+  const inputContainer = document.querySelector('.input-container');
+  const resultContainer = document.querySelector('.result-container');
 
+  inputContainer.classList.add('hide');
+  resultContainer.classList.remove('hide');
 };
 
