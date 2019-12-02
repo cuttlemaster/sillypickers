@@ -75,5 +75,16 @@ const buildMyPicker = (chosenPicker) => {
         const dropdown = question.dropdown;
         eval(dropdown)(`${question.identifier}${question.increment}`);
       });
+  }).finally(function () { // END OF THE 'PROMISE CHAIN' / LAST THING THAT HAPPENS
+    // STORE THE CONTAINER HOLDING THE QUESTION (BECAUSE IT'S OUT OF SCOPE ABOVE)
+    const questionContainer = document.querySelector('.input-container');
+
+    // CREATE BUTTON TO FIND THE ANSWER
+    const showMeBtn = document.createElement('button');
+    showMeBtn.classList.add('show-me');
+    showMeBtn.textContent = "Show Me!";
+
+    // ADD BUTTON TO THE CONTAINER BELOW THE QUESTIONS
+    questionContainer.appendChild(showMeBtn);
   });
 };

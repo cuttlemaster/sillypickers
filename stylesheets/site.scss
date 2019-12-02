@@ -86,6 +86,8 @@ button {
     color: $white;
     cursor: pointer;
   }
+
+  &.show-me { margin-top: 25px; }
 }
 
 // INPUT STYLES ===========================
@@ -97,6 +99,16 @@ button {
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $orange;
+    width: 50%;
   }
 }
 
