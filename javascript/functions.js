@@ -37,7 +37,7 @@ const buildMyPicker = (chosenPicker) => {
     .then(function (data) { // PASS FILE INTO PROMISE AS 'data'
       return data.json(); // CONVERT FROM INITIAL STRING INTO JSON
     })
-    .then(function (json) { // PASS JSON INTO PROMISE AS 'json'
+    .then(function (json) { // PASS JSON INTO PROMISE AS 'json' (MANIPULATE FROM HERE)
       const inputContainer = document.querySelector('.input-container');
       const sectionContainer = document.querySelector('.section-container');
 
@@ -82,7 +82,29 @@ const showMyResults = (picker, answers) => {
   const resultContainer = document.querySelector('.result-container');
   const answerSection = document.querySelector('.result-container section');
 
+  // SHOW AND HIDE THE RELEVANT CONTAINERS
   inputContainer.classList.add('hide');
   resultContainer.classList.remove('hide');
+
+  fetch(`/javascript/data/${picker}.json`) // GO GET THE DESIRED JSON FILE
+    .then(function (data) { // PASS FILE INTO PROMISE AS 'data'
+      return data.json(); // CONVERT FROM INITIAL STRING INTO JSON
+    })
+    .then(function (json) { // PASS JSON INTO PROMISE AS 'json' (MANIPULATE FROM HERE)
+      // CALCULATE AND STORE THE TOTAL NUMBER OF QUESTIONS FROM THE PICKER
+      const numberOfQuestions = json.questions.length;
+
+      // PROVIDE AN EMPTY ARRAY FOR THE ANSWER VALUES AND PUSH THEM VIA LOOP
+      let answerText = [];
+      for(let i = 0; i < numberOfQuestions; i++) {
+        answerText.push(json.questions[i].answers[answers[i]]);
+      }
+
+      // CREATE THE FINAL ANSWER STRING TO OUTPUT TO THE PAGE
+      const answerString = `The ${answerText[0]} ${answerText[1]}'s ${answerText[2]} ${answerText[3]}`;
+      const finalAnswer = document.createElement('h2');
+      finalAnswer.textContent = answerString;
+      answerSection.appendChild(finalAnswer);
+    });
 };
 

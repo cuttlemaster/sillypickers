@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // GRAB THE NAME OF THE PICKER AND STORE IT TO PASS INTO FUNCTION
     const sectionContainer = document.querySelector('.section-container');
     const picker = sectionContainer.dataset.name;
-    console.log(picker);
+    console.log(`the picker name is: ${picker}`);
 
     // GRAB THE QUESTION ANSWER VALUES AND STORE THEM IN AN ARRAY
     const questions = document.querySelectorAll('.question');
