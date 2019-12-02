@@ -38,58 +38,45 @@ const buildMyPicker = (chosenPicker) => {
       return data.json(); // CONVERT FROM INITIAL STRING INTO JSON
     })
     .then(function (json) { // PASS JSON INTO PROMISE AS 'json'
-      const pageContainer = document.querySelector('.container');
+      const inputContainer = document.querySelector('.input-container');
+      const sectionContainer = document.querySelector('.section-container');
 
-      // CREATE INPUT CONTAINER AND ADD THE INTRODUCTION PARAGRAPH ABOVE INPUTS
-      const inputContainer = document.createElement('div');
-      inputContainer.classList.add('input-container');
-      const introParagraph = document.createElement('p');
-      introParagraph.textContent = 'First, let\'s gather a few bits of information...';
-      inputContainer.appendChild(introParagraph);
+      // REVEAL THE INPUT CONTAINER THAT WAS HIDDEN ON PAGE LOAD
+      inputContainer.classList.remove('hide');
 
-      // ADD THE CREATED INPUT CONTAINER TO THE PAGE
-      pageContainer.appendChild(inputContainer);
-
-      json.questions.forEach((question) => {
+      // LOOP OVER THE QUESTIONS FOR THE SELECTED PICKER AND OUTPUT TO THE PAGE
+      json.questions.forEach((question, i) => {
         // CREATE A NEW SECTION ELEMENT TO HOLD THE LABEL AND INPUT
         const newSection = document.createElement('section');
 
         // CREATE A NEW LABEL AND GIVE IT ATTRIBUTES AND CONTENT
         const newLabel = document.createElement('label');
-        newLabel.setAttribute('for', `${question.identifier}${question.increment}`);
+        newLabel.setAttribute('for', `${question.identifier}${i}`);
         newLabel.textContent = question.label;
 
         // CREATE A NEW SELECT AND GIVE IT CLASSES AND A UNIQUE NAME
         const newSelect = document.createElement('select');
         newSelect.classList.add('custom');
-        newSelect.classList.add(`${question.identifier}${question.increment}`);
-        newSelect.setAttribute('name', `${question.identifier}${question.increment}`);
+        newSelect.classList.add('question');
+        newSelect.classList.add(`${question.identifier}${i}`);
+        newSelect.setAttribute('name', `${question.identifier}${i}`);
 
         // APPEND ELEMENTS IN THE CORRECT ORDER
         newSection.appendChild(newLabel);
         newSection.appendChild(newSelect);
-        inputContainer.appendChild(newSection);
+        sectionContainer.appendChild(newSection);
 
         // GENERATE THE OPTION ELEMENTS BY REFERENCING A BUILDER FUNCTION ABOVE
         // NAME OF BUILDER FUNCTION COMES FROM THE DATA FILE FOR THE SELECTED PICKER
         const dropdown = question.dropdown;
-        eval(dropdown)(`${question.identifier}${question.increment}`);
+        eval(dropdown)(`${question.identifier}${i}`);
       });
-  }).finally(function () { // END OF THE 'PROMISE CHAIN' / LAST THING THAT HAPPENS
-    // STORE THE CONTAINER HOLDING THE QUESTION (BECAUSE IT'S OUT OF SCOPE ABOVE)
-    const questionContainer = document.querySelector('.input-container');
-
-    // CREATE BUTTON TO FIND THE ANSWER
-    const showMeBtn = document.createElement('button');
-    showMeBtn.classList.add('show-me');
-    showMeBtn.textContent = "Show Me!";
-
-    // ADD BUTTON TO THE CONTAINER BELOW THE QUESTIONS
-    questionContainer.appendChild(showMeBtn);
   });
 };
 
 
 // GATHER AND SHOW RESULTS AFTER SELECTIONS ARE MADE BY THE USER ========== //
-const showMyResults = () => {};
+const showMyResults = (picker, answers) => {
+
+};
 
