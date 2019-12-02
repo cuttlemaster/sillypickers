@@ -80,6 +80,7 @@ const showMyResults = (picker, answers) => {
   // STORE RELEVANT CONTAINERS FOR MANIPULATION AS NEEDED
   const inputContainer = document.querySelector('.input-container');
   const resultContainer = document.querySelector('.result-container');
+  const answerSection = document.querySelector('.result-container section');
 
   inputContainer.classList.add('hide');
   resultContainer.classList.remove('hide');
