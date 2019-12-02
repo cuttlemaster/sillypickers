@@ -14,13 +14,6 @@ $freckle-face: 'Freckle Face', helvetica, sans-serif;
 // GLOBAL ELEMENT STYLES ==================
 body { background-color: $background; }
 
-// CONTAINER STYLES =======================
-.container {
-  margin: auto;
-  padding-top: 25px;
-  max-width: 1000px;
-}
-
 // ELEMENT STYLES =========================
 h1 {
   color: $orange;
@@ -54,12 +47,17 @@ p {
     font-family: $freckle-face;
     font-size: 24px;
     line-height: 30px;
-    // text-align: center;
     width: 650px;
   }
 
-  &.result-intro {
-    padding-top: 25px;
+  &.underline-intro {
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $orange;
+    width: 50%;
   }
 }
 
@@ -90,7 +88,13 @@ button {
   &.show-me { margin-top: 25px; }
 }
 
-// INPUT STYLES ===========================
+// CONTAINER STYLES =======================
+.container {
+  margin: auto;
+  padding-top: 25px;
+  max-width: 1000px;
+}
+
 .input-container {
   padding-top: 25px;
 
@@ -100,18 +104,9 @@ button {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-
-  p {
-    margin-top: 0;
-    margin-right: auto;
-    margin-bottom: 15px;
-    margin-left: auto;
-    padding-bottom: 10px;
-    border-bottom: 2px solid $orange;
-    width: 50%;
-  }
 }
 
+// INPUT STYLES ===========================
 label {
   display: inline-block;
   padding-top: 6px;
