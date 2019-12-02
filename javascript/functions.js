@@ -88,3 +88,8 @@ const buildMyPicker = (chosenPicker) => {
     questionContainer.appendChild(showMeBtn);
   });
 };
+
+
+// GATHER AND SHOW RESULTS AFTER SELECTIONS ARE MADE BY THE USER ========== //
+const showMyResults = () => {};
+
