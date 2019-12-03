@@ -32,6 +32,7 @@
         "x": "Fun",
         "y": "Vision",
         "z": "Land"
+      }
     },
     {
       "label": "First Letter of Your Last Name:",
@@ -64,6 +65,7 @@
         "x": "Companion",
         "y": "Tracker",
         "z": "Zephyr"
+      }
     }
   ]
 }
