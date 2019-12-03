@@ -1,0 +1,90 @@
+{
+  "introduction": "Your young adult book title is...",
+  "questions": [
+    {
+      "label": "Month You Were Born:",
+      "dropdown": "monthBuilder",
+      "identifier": "month",
+      "answers": {
+        "january": "",
+        "february": "",
+        "march": "",
+        "april": "",
+        "may": "",
+        "june": "",
+        "july": "",
+        "august": "",
+        "september": "",
+        "october": "",
+        "november": "",
+        "december": ""
+      }
+    },
+    {
+      "label": "Second Letter of Your Last Name:",
+      "dropdown": "alphabetBuilder",
+      "identifier": "alphabet",
+      "answers": {
+        "a": "Patch",
+        "b": "Pistol",
+        "c": "Dogwatch",
+        "d": "Scourge",
+        "e": "Squid",
+        "f": "Big Boat",
+        "g": "Scuppers",
+        "h": "Cheesebeard",
+        "i": "Boots",
+        "j": "Parker",
+        "k": "Bowsprit",
+        "l": "Spyglass",
+        "m": "Arse",
+        "n": "Cutlass",
+        "o": "Chairs",
+        "p": "Dirk",
+        "q": "Slash",
+        "r": "Rumpot",
+        "s": "Hookhand",
+        "t": "Headwound",
+        "u": "Blunderbuss",
+        "v": "Barnacle",
+        "w": "Skipper",
+        "x": "Hammock",
+        "y": "Gunner",
+        "z": "Dog"
+      }
+    },
+    {
+      "label": "Last Letter of Your Last Name:",
+      "dropdown": "alphabetBuilder",
+      "identifier": "alphabet",
+      "answers": {
+        "a": "Stormwatcher",
+        "b": "Fireship",
+        "c": "Culverin",
+        "d": "Sassmouth",
+        "e": "Morgan",
+        "f": "Ridgecrop",
+        "g": "Flint",
+        "h": "Salami",
+        "i": "Le Bastardi",
+        "j": "Slacks",
+        "k": "Littlejib",
+        "l": "Abbatoir",
+        "m": "Oubliette",
+        "n": "the Well-Endowed",
+        "o": "Chamberpot",
+        "p": "Mizzenmast",
+        "q": "Smash",
+        "r": "Broadside",
+        "s": "Slappy",
+        "t": "Tankard",
+        "u": "Tungsten",
+        "v": "Cavalier",
+        "w": "Johnson",
+        "x": "Shipburner",
+        "y": "Slowmatch",
+        "z": "Gunnel"
+      }
+    }
+  ]
+}

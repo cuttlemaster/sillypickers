@@ -1,7 +1,7 @@
 const availablePickers = ["romanceNovelTitle","rvName","superstarDiva","wweSuperstar","pirateName","slothName"];
 
 const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-const months = ["january","february","march","april","may","june","july","august","september","october","november","december"];
+const month = ["january","february","march","april","may","june","july","august","september","october","november","december"];
 
 // GENERATES A RANDOM NUMBER SO YOU CAN PICK A GENERATOR FROM THE LIST
 const getRandomNumber = () => {
@@ -22,6 +22,27 @@ const alphabetBuilder = (parentElement) => {
   // LOOP THROUGH ALPHABET ARRAY AND CREATE OPTION ELEMENTS
   // ADD THE OPTION ELEMENT TO THE SELECT DROPDOWN
   alphabet.forEach((value) => {
+    const newOption = document.createElement('option');
+    newOption.value = value;
+    newOption.textContent = value.toUpperCase();
+    container.appendChild(newOption);
+  });
+};
+
+// MONTH DROPDOWN BUILDER =========================== //
+// CREATES A DROPDOWN USING THE 12 MONTHS OF THE YEAR //
+const monthBuilder = (parentElement) => {
+  // SET CONTAINING ELEMENT TO WHATEVER IS PASSED INTO FUNCTION
+  const container = document.querySelector(`.${parentElement}`);
+
+  // ADD BLANK OPTION ELEMENT TO TOP OF DROPDOWN
+  const blankOption = document.createElement('option');
+  blankOption.textContent = '--';
+  container.appendChild(blankOption);
+
+  // LOOP THROUGH ALPHABET ARRAY AND CREATE OPTION ELEMENTS
+  // ADD THE OPTION ELEMENT TO THE SELECT DROPDOWN
+  month.forEach((value) => {
     const newOption = document.createElement('option');
     newOption.value = value;
     newOption.textContent = value.toUpperCase();
