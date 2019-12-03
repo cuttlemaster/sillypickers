@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pickMyOwnBtn.classList.add('hide');       // HIDE THE PICK MY OWN BUTTON
 
     // GRAB A RANDOM NUMBER AND USE IT TO SELECT A PICKER AND BUILD IT
-    const randomNumber = 0;
+    const randomNumber = 1;
     const chosenPicker = availablePickers[randomNumber];
     buildMyPicker(chosenPicker);
   });
