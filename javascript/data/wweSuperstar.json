@@ -1,0 +1,71 @@
+{
+  "introduction": "Your WWE SuperStar name is...",
+  "questions": [
+    {
+      "label": "First Letter of Your First Name:",
+      "dropdown": "alphabetBuilder",
+      "identifier": "alphabet",
+      "answers": {
+        "a": "Mighty",
+        "b": "Grand",
+        "c": "Primal",
+        "d": "Maverick",
+        "e": "Bad News",
+        "f": "Dirk",
+        "g": "Diamond",
+        "h": "Johnny",
+        "i": "Gunner",
+        "j": "Cerebral",
+        "k": "Butch",
+        "l": "Brooklyn",
+        "m": "Outlaw",
+        "n": "Prince",
+        "o": "Bunkhouse",
+        "p": "Titanic",
+        "q": "Bionic",
+        "r": "Doctor",
+        "s": "Freak",
+        "t": "Fusion",
+        "u": "Rocky",
+        "v": "Sundance",
+        "w": "Triple",
+        "x": "King Kong",
+        "y": "Beefy",
+        "z": "Crazy"
+      }
+    },
+    {
+      "label": "First Letter of Your Last Name:",
+      "dropdown": "alphabetBuilder",
+      "identifier": "alphabet",
+      "answers": {
+        "a": "Shadow",
+        "b": "Hellfire",
+        "c": "Basher",
+        "d": "Swagger",
+        "e": "Spider",
+        "f": "Snake",
+        "g": "Hulk",
+        "h": "Viper",
+        "i": "Spike",
+        "j": "Magnum",
+        "k": "Hercules",
+        "l": "Spawn",
+        "m": "Warrior",
+        "n": "Sniper",
+        "o": "Tiger",
+        "p": "Swarm",
+        "q": "Champ",
+        "r": "Show",
+        "s": "Ninja",
+        "t": "Executioner",
+        "u": "Tornado",
+        "v": "Cowboy",
+        "w": "Hawk",
+        "x": "Slate",
+        "y": "Assassin",
+        "z": "Tank"
+      }
+    }
+  ]
+}
