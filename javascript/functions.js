@@ -50,6 +50,27 @@ const monthBuilder = (parentElement) => {
   });
 };
 
+// NUMBER DROPDOWN BUILDER ==================== //
+// CREATES A DROPDOWN USING THE NUMBERS 1 TO 31 //
+const numberBuilder = (parentElement) => {
+  // SET CONTAINING ELEMENT TO WHATEVER IS PASSED INTO FUNCTION
+  const container = document.querySelector(`.${parentElement}`);
+
+  // ADD BLANK OPTION ELEMENT TO TOP OF DROPDOWN
+  const blankOption = document.createElement('option');
+  blankOption.textContent = '--';
+  container.appendChild(blankOption);
+
+  // LOOP THROUGH ALPHABET ARRAY AND CREATE OPTION ELEMENTS
+  // ADD THE OPTION ELEMENT TO THE SELECT DROPDOWN
+  for(let i = 1; i < 31; i++) {
+    const newOption = document.createElement('option');
+    newOption.value = i;
+    newOption.textContent = i;
+    container.appendChild(newOption);
+  }
+};
+
 // BUILD THE CHOSEN PICKER WITH ALL OF ITS BITS AND PIECES
 // NEEDS TO BE AT THE BOTTOM OF THE LIST SO IT CAN REFERENCE ADDITIONAL BUILD FUNCTIONS ABOVE IN THE FILE
 const buildMyPicker = (chosenPicker) => {
