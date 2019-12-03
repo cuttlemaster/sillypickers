@@ -1,4 +1,4 @@
-const availablePickers = ["romanceNovelTitle","rvName"];
+const availablePickers = ["romanceNovelTitle","rvName","superstarDiva"];
 
 const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 const months = ["january","february","march","april","may","june","july","august","september","october","november","december"];
@@ -118,6 +118,11 @@ const showMyResults = (picker, selections) => {
         break;
 
         case "rvName":
+          answerString = `${answersArray[0]} ${answersArray[1]}`;
+          finalAnswer.textContent = answerString;
+        break;
+
+        case "superstarDiva":
           answerString = `${answersArray[0]} ${answersArray[1]}`;
           finalAnswer.textContent = answerString;
         break;

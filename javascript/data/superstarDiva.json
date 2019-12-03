@@ -1,0 +1,71 @@
+{
+  "introduction": "Your WWE SuperStar Diva name is...",
+  "questions": [
+    {
+      "label": "First Letter of Your First Name:",
+      "dropdown": "alphabetBuilder",
+      "identifier": "alphabet",
+      "answers": {
+        "a": "Blonde",
+        "b": "Silver",
+        "c": "Bonnie",
+        "d": "No Way",
+        "e": "Fusion",
+        "f": "Rubby",
+        "g": "Kaitlyn",
+        "h": "Natural",
+        "i": "The Fabulous",
+        "j": "Leggy",
+        "k": "Layla",
+        "l": "Miss",
+        "m": "Jillian",
+        "n": "Sister",
+        "o": "Bette",
+        "p": "Missy",
+        "q": "Jazz",
+        "r": "Mickie",
+        "s": "Velvet",
+        "t": "Diamond",
+        "u": "Brie",
+        "v": "Kat",
+        "w": "Eve",
+        "x": "Arial",
+        "y": "Curvy",
+        "z": "Mrs."
+      }
+    },
+    {
+      "label": "First Letter of Your Last Name:",
+      "dropdown": "alphabetBuilder",
+      "identifier": "alphabet",
+      "answers": {
+        "a": "Medusa",
+        "b": "Sass",
+        "c": "Rose",
+        "d": "McCool",
+        "e": "Moolah",
+        "f": "Duchess",
+        "g": "Betsy",
+        "h": "Peach",
+        "i": "Twilight",
+        "j": "Model",
+        "k": "Nova",
+        "l": "Bella",
+        "m": "Phoenix",
+        "n": "Dame",
+        "o": "Lynn",
+        "p": "Maid",
+        "q": "Jane",
+        "r": "Sky",
+        "s": "Wife",
+        "t": "Sue",
+        "u": "Sunny",
+        "v": "Chick",
+        "w": "Violet",
+        "x": "Val",
+        "y": "Venus",
+        "z": "Lady"
+      }
+    }
+  ]
+}
