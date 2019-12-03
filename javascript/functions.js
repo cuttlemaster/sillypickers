@@ -5,7 +5,7 @@ const months = ["january","february","march","april","may","june","july","august
 
 // GENERATES A RANDOM NUMBER SO YOU CAN PICK A GENERATOR FROM THE LIST
 const getRandomNumber = () => {
-  return Math.floor(Math.random() * Math.floor(10));
+  return Math.floor(Math.random() * Math.floor(2));
 };
 
 // ALPHABET DROPDOWN BUILDER ============================= //
@@ -109,9 +109,16 @@ const showMyResults = (picker, selections) => {
       }
 
       // DETERMINE THE FULL STRING OF THE FINAL ANSWER DEPENDENT ON THE PICKER USED
+      let answerString = "";
+
       switch(picker) {
         case "romanceNovelTitle":
-          const answerString = `The ${answersArray[0]} ${answersArray[1]}'s ${answersArray[2]} ${answersArray[3]}`;
+          answerString = `The ${answersArray[0]} ${answersArray[1]}'s ${answersArray[2]} ${answersArray[3]}`;
+          finalAnswer.textContent = answerString;
+        break;
+
+        case "rvName":
+          answerString = `${answersArray[0]} ${answersArray[1]}`;
           finalAnswer.textContent = answerString;
         break;
 
