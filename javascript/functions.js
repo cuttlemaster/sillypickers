@@ -5,7 +5,7 @@ const months = ["january","february","march","april","may","june","july","august
 
 // GENERATES A RANDOM NUMBER SO YOU CAN PICK A GENERATOR FROM THE LIST
 const getRandomNumber = () => {
-  return Math.floor(Math.random() * Math.floor(2));
+  return Math.floor(Math.random() * Math.floor(availablePickers.length));
 };
 
 // ALPHABET DROPDOWN BUILDER ============================= //
