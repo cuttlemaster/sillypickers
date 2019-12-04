@@ -1,4 +1,4 @@
-const availablePickers = ["romanceNovelTitle","rvName","superstarDiva","wweSuperstar","pirateName","slothName","yaBookTitle"];
+const availablePickers = ["romanceNovelTitle","rvName","superstarDiva","wweSuperstar","pirateName","slothName","yaBookTitle","superVillain"];
 
 const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 const month = ["january","february","march","april","may","june","july","august","september","october","november","december"];
@@ -63,7 +63,7 @@ const numberBuilder = (parentElement) => {
 
   // LOOP THROUGH ALPHABET ARRAY AND CREATE OPTION ELEMENTS
   // ADD THE OPTION ELEMENT TO THE SELECT DROPDOWN
-  for(let i = 1; i < 31; i++) {
+  for(let i = 1; i <= 31; i++) {
     const newOption = document.createElement('option');
     newOption.value = i;
     newOption.textContent = i;
@@ -186,6 +186,11 @@ const showMyResults = (picker, selections) => {
 
         case "yaBookTitle":
           answerString = `${answersArray[0]}, ${answersArray[1]}, and Other ${answersArray[2]}`;
+          finalAnswer.textContent = answerString;
+        break;
+
+        case "superVillain":
+          answerString = `${answersArray[0]} ${answersArray[1]} the ${answersArray[2]} of ${answersArray[3]}`;
           finalAnswer.textContent = answerString;
         break;
 

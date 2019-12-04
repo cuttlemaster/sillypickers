@@ -54,7 +54,7 @@
       }
     },
     {
-      "label": "Day of Your Birthday:",
+      "label": "Day You Were Born:",
       "dropdown": "numberBuilder",
       "identifier": "number",
       "answers": {
