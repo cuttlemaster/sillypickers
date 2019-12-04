@@ -197,21 +197,8 @@ const showMyResults = (picker, selections) => {
       let answerString = "";
 
       switch(picker) {
-        case "romanceNovelTitle":
-          answerString = `The ${answersArray[0]} ${answersArray[1]}'s ${answersArray[2]} ${answersArray[3]}`;
-          finalAnswer.textContent = answerString;
-        break;
-
         case "rvName":
-          answerString = `${answersArray[0]} ${answersArray[1]}`;
-          finalAnswer.textContent = answerString;
-        break;
-
         case "superstarDiva":
-          answerString = `${answersArray[0]} ${answersArray[1]}`;
-          finalAnswer.textContent = answerString;
-        break;
-
         case "wweSuperstar":
           answerString = `${answersArray[0]} ${answersArray[1]}`;
           finalAnswer.textContent = answerString;
@@ -222,8 +209,13 @@ const showMyResults = (picker, selections) => {
           finalAnswer.textContent = answerString;
         break;
 
+        case "romanceNovelTitle":
+          answerString = `The ${answersArray[0]} ${answersArray[1]}'s ${answersArray[2]} ${answersArray[3]}`;
+          finalAnswer.textContent = answerString;
+        break;
+
         case "slothName":
-          answerString = `${answersArray[0]} the  ${answersArray[1]} ${answersArray[2]}`;
+          answerString = `${answersArray[0]} the ${answersArray[1]} ${answersArray[2]}`;
           finalAnswer.textContent = answerString;
         break;
 
