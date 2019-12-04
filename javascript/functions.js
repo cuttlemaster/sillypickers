@@ -2,6 +2,7 @@ const availablePickers = ["romanceNovelTitle","rvName","superstarDiva","wweSuper
 
 const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 const month = ["january","february","march","april","may","june","july","august","september","october","november","december"];
+const zodiac = ["aries","taurus","gemini","cancer","leo","virgo","libra","scorpio","sagittarius","capricorn","aquarius","pisces"];
 
 // GENERATES A RANDOM NUMBER SO YOU CAN PICK A GENERATOR FROM THE LIST
 const getRandomNumber = () => {
@@ -50,6 +51,27 @@ const monthBuilder = (parentElement) => {
   });
 };
 
+// MONTH DROPDOWN BUILDER =========================== //
+// CREATES A DROPDOWN USING THE 12 SIGNS ============ //
+const zodiacBuilder = (parentElement) => {
+  // SET CONTAINING ELEMENT TO WHATEVER IS PASSED INTO FUNCTION
+  const container = document.querySelector(`.${parentElement}`);
+
+  // ADD BLANK OPTION ELEMENT TO TOP OF DROPDOWN
+  const blankOption = document.createElement('option');
+  blankOption.textContent = '--';
+  container.appendChild(blankOption);
+
+  // LOOP THROUGH ALPHABET ARRAY AND CREATE OPTION ELEMENTS
+  // ADD THE OPTION ELEMENT TO THE SELECT DROPDOWN
+  zodiac.forEach((value) => {
+    const newOption = document.createElement('option');
+    newOption.value = value;
+    newOption.textContent = value.toUpperCase();
+    container.appendChild(newOption);
+  });
+};
+
 // NUMBER DROPDOWN BUILDER ==================== //
 // CREATES A DROPDOWN USING THE NUMBERS 1 TO 31 //
 const numberBuilder = (parentElement) => {
@@ -64,6 +86,27 @@ const numberBuilder = (parentElement) => {
   // LOOP THROUGH ALPHABET ARRAY AND CREATE OPTION ELEMENTS
   // ADD THE OPTION ELEMENT TO THE SELECT DROPDOWN
   for(let i = 1; i <= 31; i++) {
+    const newOption = document.createElement('option');
+    newOption.value = i;
+    newOption.textContent = i;
+    container.appendChild(newOption);
+  }
+};
+
+// NUMBER DROPDOWN BUILDER ==================== //
+// CREATES A DROPDOWN USING THE NUMBERS 0 TO 9 //
+const digitBuilder = (parentElement) => {
+  // SET CONTAINING ELEMENT TO WHATEVER IS PASSED INTO FUNCTION
+  const container = document.querySelector(`.${parentElement}`);
+
+  // ADD BLANK OPTION ELEMENT TO TOP OF DROPDOWN
+  const blankOption = document.createElement('option');
+  blankOption.textContent = '--';
+  container.appendChild(blankOption);
+
+  // LOOP THROUGH ALPHABET ARRAY AND CREATE OPTION ELEMENTS
+  // ADD THE OPTION ELEMENT TO THE SELECT DROPDOWN
+  for(let i = 0; i <= 9; i++) {
     const newOption = document.createElement('option');
     newOption.value = i;
     newOption.textContent = i;
