@@ -1,4 +1,4 @@
-const availablePickers = ["romanceNovelTitle","rvName","superstarDiva","wweSuperstar","pirateName","slothName","yaBookTitle","superVillain"];
+const availablePickers = ["romanceNovelTitle","rvName","superstarDiva","wweSuperstar","pirateName","slothName","yaBookTitle","superVillain","adventureTitle"];
 
 const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 const month = ["january","february","march","april","may","june","july","august","september","october","november","december"];
@@ -234,6 +234,11 @@ const showMyResults = (picker, selections) => {
 
         case "superVillain":
           answerString = `${answersArray[0]} ${answersArray[1]} the ${answersArray[2]} of ${answersArray[3]}`;
+          finalAnswer.textContent = answerString;
+        break;
+
+        case "adventureTitle":
+          answerString = `The ${answersArray[0]} ${answersArray[1]} in the ${answersArray[2]}`;
           finalAnswer.textContent = answerString;
         break;
 

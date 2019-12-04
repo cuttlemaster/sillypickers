@@ -1,0 +1,74 @@
+{
+  "introduction": "The title of your adventure is...",
+  "questions": [
+    {
+      "label": "Your Zodiac Sign:",
+      "dropdown": "zodiacBuilder",
+      "identifier": "zodiac",
+      "answers": {
+        "aries": "Fiercest",
+        "taurus": "Scrappiest",
+        "gemini": "Unluckiest",
+        "cancer": "Tackiest",
+        "leo": "Messiest",
+        "virgo": "Friendliest",
+        "libra": "Classiest",
+        "scorpio": "Strangest",
+        "sagittarius": "Sassiest",
+        "capricorn": "Grumpiest",
+        "aquarius": "Swooniest",
+        "pisces": "Nerdiest"
+      }
+    },
+    {
+      "label": "First Letter of Your First Name:",
+      "dropdown": "alphabetBuilder",
+      "identifier": "alphabet",
+      "answers": {
+        "a": "Unicorn",
+        "b": "Girl",
+        "c": "Book Nerd",
+        "d": "Alien",
+        "e": "Librarian",
+        "f": "Boy",
+        "g": "Octopus",
+        "h": "Chef",
+        "i": "Hipster",
+        "j": "Llama",
+        "k": "Chicken",
+        "l": "Wizard",
+        "m": "Vegan",
+        "n": "Pineapple",
+        "o": "Baker",
+        "p": "DJ",
+        "q": "Assassin",
+        "r": "Spy",
+        "s": "Corgi",
+        "t": "Pirate",
+        "u": "Warrior",
+        "v": "Architect",
+        "w": "Enthusiast",
+        "x": "Collector",
+        "y": "Baby",
+        "z": "Astronaut"
+      }
+    },
+    {
+      "label": "Last Digit of Your Birth Year:",
+      "dropdown": "digitBuilder",
+      "identifier": "digit",
+      "answers": {
+        "0": "Sea",
+        "1": "Apothecary",
+        "2": "Universe",
+        "3": "Land",
+        "4": "Coffee Shop",
+        "5": "Bookstore",
+        "6": "Forest",
+        "7": "Habberdashery",
+        "8": "Mansion",
+        "9": "Kingdom"
+      }
+    }
+  ]
+}
