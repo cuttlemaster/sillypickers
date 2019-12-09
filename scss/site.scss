@@ -3,8 +3,8 @@
 // COLOR AND FONT VARIABLES ===============
 $white: #ffffff;
 $black: #000000;
-$background: #fefefe;
-$body-copy: #434343;
+$background: #434343;
+$body-copy: #fefefe;
 $orange: #ff5722;
 $orange-hover: #ff7043;
 
@@ -43,7 +43,7 @@ p {
   &.introduction {
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 25px;
+    padding-bottom: 50px;
     font-family: $freckle-face;
     font-size: 24px;
     line-height: 30px;
@@ -70,7 +70,7 @@ button {
   padding-right: 35px;
   padding-bottom: 10px;
   padding-left: 35px;
-  background-color: $white;
+  background-color: transparent;
   border: 2px solid $orange;
   border-radius: 25px;
   color: $orange;
@@ -81,7 +81,7 @@ button {
 
   &:hover {
     background-color: $orange;
-    color: $white;
+    color: $background;
     cursor: pointer;
   }
 

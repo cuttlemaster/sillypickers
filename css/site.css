@@ -18,7 +18,7 @@ img {
   height: auto; }
 
 body {
-  background-color: #fefefe; }
+  background-color: #434343; }
 
 h1 {
   color: #ff5722;
@@ -36,7 +36,7 @@ h2 {
   text-align: center; }
 
 p {
-  color: #434343;
+  color: #fefefe;
   font-family: "Open Sans", arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -45,7 +45,7 @@ p {
   p.introduction {
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 25px;
+    padding-bottom: 50px;
     font-family: "Freckle Face", helvetica, sans-serif;
     font-size: 24px;
     line-height: 30px;
@@ -68,7 +68,7 @@ button {
   padding-right: 35px;
   padding-bottom: 10px;
   padding-left: 35px;
-  background-color: #ffffff;
+  background-color: transparent;
   border: 2px solid #ff5722;
   border-radius: 25px;
   color: #ff5722;
@@ -78,7 +78,7 @@ button {
   text-transform: uppercase; }
   button:hover {
     background-color: #ff5722;
-    color: #ffffff;
+    color: #434343;
     cursor: pointer; }
   button.show-me {
     margin-top: 25px; }
@@ -104,7 +104,7 @@ label {
   padding-top: 6px;
   padding-bottom: 10px;
   padding-right: 15px;
-  color: #434343;
+  color: #fefefe;
   font-family: "Freckle Face", helvetica, sans-serif;
   font-size: 24px;
   text-align: center; }
