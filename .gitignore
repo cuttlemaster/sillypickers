@@ -2,7 +2,6 @@
 Desktop.ini
 thumbs.db
 .sass-cache
-/css
 node_modules
 /*.log
 /*.lock
