@@ -16,7 +16,7 @@
         "black": "Murder",
         "white": "Incident",
         "gray": "Fate",
-        "multi-colored": "Trial",
+        "blue": "Trial",
         "other": "Tragedy"
       }
     },

@@ -3,7 +3,7 @@ const availablePickers = ["romanceNovelTitle","rvName","superstarDiva","wweSuper
 const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 const month = ["january","february","march","april","may","june","july","august","september","october","november","december"];
 const zodiac = ["aries","taurus","gemini","cancer","leo","virgo","libra","scorpio","sagittarius","capricorn","aquarius","pisces"];
-const shirts = ["red","orange","yellow","green","purple","pink","brown","black","white","gray","multi-colored","other"];
+const shirts = ["red","orange","yellow","green","purple","pink","brown","black","white","gray","blue","other"];
 
 // GENERATES A RANDOM NUMBER SO YOU CAN PICK A GENERATOR FROM THE LIST
 const getRandomNumber = () => {
@@ -259,6 +259,11 @@ const showMyResults = (picker, selections) => {
 
         case "eightiesBand":
           answerString = `${answersArray[0]} & the ${answersArray[1]} ${answersArray[2]}`;
+          finalAnswer.textContent = answerString;
+        break;
+
+        case "sherlockStory":
+          answerString = `The ${answersArray[0]} of the ${answersArray[1]} ${answersArray[2]}`;
           finalAnswer.textContent = answerString;
         break;
 
