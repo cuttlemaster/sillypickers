@@ -1,0 +1,62 @@
+{
+  "introduction": "Your mermaid name is...",
+  "questions": [
+    {
+      "label": "Month You Were Born:",
+      "dropdown": "monthBuilder",
+      "identifier": "month",
+      "answers": {
+        "january": "Nami",
+        "february": "Nerissa",
+        "march": "Andrina",
+        "april": "Melusine",
+        "may": "Aquilina",
+        "june": "Pearl",
+        "july": "Evelyn",
+        "august": "Marina",
+        "september": "Melody",
+        "october": "Morgana",
+        "november": "Cora",
+        "december": "Serena"
+      }
+    },
+    {
+      "label": "Day You Were Born:",
+      "dropdown": "numberBuilder",
+      "identifier": "number",
+      "answers": {
+        "1": "Azura",
+        "2": "Treasure Guardian",
+        "3": "Laguna",
+        "4": "Water Lily",
+        "5": "Gillyweed",
+        "6": "Sapphire",
+        "7": "Stormheart",
+        "8": "The Beloved",
+        "9": "Drifter",
+        "10": "Moon",
+        "11": "Cove Dweller",
+        "12": "Whale Tamer",
+        "13": "Tide Caller",
+        "14": "Seafoam",
+        "15": "Dream Witch",
+        "16": "Dolphin Whisperer",
+        "17": "Angel Fish",
+        "18": "Lake Sprite",
+        "19": "Seaflower",
+        "20": "Wavedancer",
+        "21": "Bubble",
+        "22": "Songstress",
+        "23": "Reef",
+        "24": "Maiden",
+        "25": "Neptuna",
+        "26": "Aquamarine",
+        "27": "Jewel",
+        "28": "Watermane",
+        "29": "Swimmer",
+        "30": "Sparkle",
+        "31": "Seahorse"
+      }
+    }
+  ]
+}
