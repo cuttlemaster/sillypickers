@@ -3,6 +3,7 @@ const availablePickers = ["romanceNovelTitle","rvName","superstarDiva","wweSuper
 const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 const month = ["january","february","march","april","may","june","july","august","september","october","november","december"];
 const zodiac = ["aries","taurus","gemini","cancer","leo","virgo","libra","scorpio","sagittarius","capricorn","aquarius","pisces"];
+const shirts = ["red","orange","yellow","green","purple","pink","brown","black","white","gray","multi-colored","other"];
 
 // GENERATES A RANDOM NUMBER SO YOU CAN PICK A GENERATOR FROM THE LIST
 const getRandomNumber = () => {
@@ -51,7 +52,7 @@ const monthBuilder = (parentElement) => {
   });
 };
 
-// MONTH DROPDOWN BUILDER =========================== //
+// ZODIAC DROPDOWN BUILDER ========================== //
 // CREATES A DROPDOWN USING THE 12 SIGNS ============ //
 const zodiacBuilder = (parentElement) => {
   // SET CONTAINING ELEMENT TO WHATEVER IS PASSED INTO FUNCTION
@@ -65,6 +66,27 @@ const zodiacBuilder = (parentElement) => {
   // LOOP THROUGH ALPHABET ARRAY AND CREATE OPTION ELEMENTS
   // ADD THE OPTION ELEMENT TO THE SELECT DROPDOWN
   zodiac.forEach((value) => {
+    const newOption = document.createElement('option');
+    newOption.value = value;
+    newOption.textContent = value.toUpperCase();
+    container.appendChild(newOption);
+  });
+};
+
+// SHIRTS DROPDOWN BUILDER ========================== //
+// CREATES A DROPDOWN USING SHIRT COLORS ============ //
+const shirtsBuilder = (parentElement) => {
+  // SET CONTAINING ELEMENT TO WHATEVER IS PASSED INTO FUNCTION
+  const container = document.querySelector(`.${parentElement}`);
+
+  // ADD BLANK OPTION ELEMENT TO TOP OF DROPDOWN
+  const blankOption = document.createElement('option');
+  blankOption.textContent = '--';
+  container.appendChild(blankOption);
+
+  // LOOP THROUGH ALPHABET ARRAY AND CREATE OPTION ELEMENTS
+  // ADD THE OPTION ELEMENT TO THE SELECT DROPDOWN
+  shirts.forEach((value) => {
     const newOption = document.createElement('option');
     newOption.value = value;
     newOption.textContent = value.toUpperCase();
@@ -93,7 +115,7 @@ const numberBuilder = (parentElement) => {
   }
 };
 
-// NUMBER DROPDOWN BUILDER ==================== //
+// DIGIT DROPDOWN BUILDER ==================== //
 // CREATES A DROPDOWN USING THE NUMBERS 0 TO 9 //
 const digitBuilder = (parentElement) => {
   // SET CONTAINING ELEMENT TO WHATEVER IS PASSED INTO FUNCTION
