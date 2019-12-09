@@ -32,6 +32,20 @@ h2 {
   text-align: center;
 }
 
+h4 {
+  padding-bottom: 25px;
+  color: $body-copy;
+  font-family: $freckle-face;
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    color: $blue;
+    cursor: pointer;
+  }
+}
+
 p {
   color: $body-copy;
   font-family: $open-sans;
@@ -58,6 +72,8 @@ p {
     padding-bottom: 10px;
     border-bottom: 2px solid $blue;
     width: 50%;
+
+    &.padded { margin-bottom: 25px; }
   }
 }
 
@@ -71,9 +87,9 @@ button {
   padding-bottom: 10px;
   padding-left: 35px;
   background-color: transparent;
-  border: 2px solid $blue;
+  border: 2px solid $white;
   border-radius: 25px;
-  color: $blue;
+  color: $white;
   font-family: $freckle-face;
   font-size: 20px;
   font-weight: 600;
@@ -81,7 +97,6 @@ button {
 
   &:hover {
     background-color: $blue;
-    color: $background;
     cursor: pointer;
   }
 
@@ -96,8 +111,6 @@ button {
 }
 
 .input-container {
-  padding-top: 25px;
-
   section {
     display: flex;
     justify-content: center;

@@ -35,6 +35,17 @@ h2 {
   text-transform: uppercase;
   text-align: center; }
 
+h4 {
+  padding-bottom: 25px;
+  color: #fefefe;
+  font-family: "Freckle Face", helvetica, sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center; }
+  h4:hover {
+    color: #03a9f4;
+    cursor: pointer; }
+
 p {
   color: #fefefe;
   font-family: "Open Sans", arial, sans-serif;
@@ -58,6 +69,8 @@ p {
     padding-bottom: 10px;
     border-bottom: 2px solid #03a9f4;
     width: 50%; }
+    p.underline-intro.padded {
+      margin-bottom: 25px; }
 
 button {
   display: block;
@@ -69,16 +82,15 @@ button {
   padding-bottom: 10px;
   padding-left: 35px;
   background-color: transparent;
-  border: 2px solid #03a9f4;
+  border: 2px solid #ffffff;
   border-radius: 25px;
-  color: #03a9f4;
+  color: #ffffff;
   font-family: "Freckle Face", helvetica, sans-serif;
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase; }
   button:hover {
     background-color: #03a9f4;
-    color: #434343;
     cursor: pointer; }
   button.show-me {
     margin-top: 25px; }
@@ -88,13 +100,11 @@ button {
   padding-top: 25px;
   max-width: 1000px; }
 
-.input-container {
-  padding-top: 25px; }
-  .input-container section {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px; }
+.input-container section {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 .result-container {
   padding-top: 25px; }
