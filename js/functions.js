@@ -1,4 +1,4 @@
-const availablePickers = ["romanceNovelTitle","rvName","superstarDiva","wweSuperstar","pirateName","slothName","yaBookTitle","superVillain","adventureTitle","mermaidName","eightiesBand"];
+const availablePickers = ["romanceNovelTitle","rvName","superstarDiva","wweSuperstar","pirateName","slothName","yaBookTitle","superVillain","adventureTitle","mermaidName","eightiesBand","sherlockStory"];
 
 const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 const month = ["january","february","march","april","may","june","july","august","september","october","november","december"];

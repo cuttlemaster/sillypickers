@@ -1,0 +1,81 @@
+{
+  "introduction": "Your Sherlock Holmes story title is...",
+  "questions": [
+    {
+      "label": "The Color of Your Shirt:",
+      "dropdown": "shirtsBuilder",
+      "identifier": "shirts",
+      "answers": {
+        "red": "Problem",
+        "orange": "Scandal",
+        "yellow": "Mystery",
+        "green": "Enigma",
+        "purple": "Secret",
+        "pink": "Adventure",
+        "brown": "Legend",
+        "black": "Murder",
+        "white": "Incident",
+        "gray": "Fate",
+        "multi-colored": "Trial",
+        "other": "Tragedy"
+      }
+    },
+    {
+      "label": "Your Zodiac Sign:",
+      "dropdown": "zodiacBuilder",
+      "identifier": "zodiac",
+      "answers": {
+        "aries": "Night-Time",
+        "taurus": "Maniacal",
+        "gemini": "Part-Time",
+        "cancer": "Meticulous",
+        "leo": "Persnickety",
+        "virgo": "Judgmental",
+        "libra": "Abominable",
+        "scorpio": "Unexpected",
+        "sagittarius": "Lurking",
+        "capricorn": "Insidious",
+        "aquarius": "Psychic",
+        "pisces": "Loquacious"
+      }
+    },
+    {
+      "label": "The Day You Were Born:",
+      "dropdown": "numberBuilder",
+      "identifier": "number",
+      "answers": {
+        "1": "Toaster",
+        "2": "Bachelor",
+        "3": "Librarian",
+        "4": "Kitten",
+        "5": "Selfie",
+        "6": "Meme",
+        "7": "Oyster",
+        "8": "Squirrel",
+        "9": "Shiba Inu",
+        "10": "Doctor",
+        "11": "Politician",
+        "12": "Diva",
+        "13": "Teenager",
+        "14": "Visitor",
+        "15": "Blogger",
+        "16": "YouTuber",
+        "17": "Turtle",
+        "18": "Puzzle",
+        "19": "Teacher",
+        "20": "Pelican",
+        "21": "Cupcake",
+        "22": "Thumb",
+        "23": "Tracksuit",
+        "24": "Wardrobe",
+        "25": "Potato",
+        "26": "Writer",
+        "27": "Waffle",
+        "28": "Uncle",
+        "29": "Stranger",
+        "30": "Unicorn",
+        "31": "Bookshelf"
+      }
+    }
+  ]
+}
