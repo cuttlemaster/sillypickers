@@ -117,7 +117,7 @@ const digitBuilder = (parentElement) => {
 // BUILD THE CHOSEN PICKER WITH ALL OF ITS BITS AND PIECES
 // NEEDS TO BE AT THE BOTTOM OF THE LIST SO IT CAN REFERENCE ADDITIONAL BUILD FUNCTIONS ABOVE IN THE FILE
 const buildMyPicker = (chosenPicker) => {
-  fetch(`/javascript/data/${chosenPicker}.json`) // GO GET THE DESIRED JSON FILE
+  fetch(`/js/data/${chosenPicker}.json`) // GO GET THE DESIRED JSON FILE
     .then(function (data) { // PASS FILE INTO PROMISE AS 'data'
       return data.json(); // CONVERT FROM INITIAL STRING INTO JSON
     })
@@ -173,7 +173,7 @@ const showMyResults = (picker, selections) => {
   inputContainer.classList.add('hide');
   resultContainer.classList.remove('hide');
 
-  fetch(`/javascript/data/${picker}.json`) // GO GET THE DESIRED JSON FILE
+  fetch(`/js/data/${picker}.json`) // GO GET THE DESIRED JSON FILE
     .then(function (data) { // PASS FILE INTO PROMISE AS 'data'
       return data.json(); // CONVERT FROM INITIAL STRING INTO JSON
     })
