@@ -1,9 +1,18 @@
 # silly-pickers
 
-As part of a development team showcase I wanted to try my hand at making at some more involved javascript work and shake off some rust with using reusable functions to maninpulate the DOM and give users different choices to generate some frivolous and fun results. The basis for the project is the various "name" or "title" generators that you see posted on Facebook or Instagram where you pick options from a list based on your initials, birthday, or some other arbitrary data.
+My development team does quarterly showcases where we build small projects with the intent of learning something new along the way we can share with the team and improve our own skills and spread around interesting and helpful learnings. For the Q3 2019 showcase I decided to make a random generator engine that runs off of the various "name" or "title" generators you see posted on Facebook or Instagram that have you pick options based on things like your initials, birthday, or some other arbitrary data.
 
-The idea is to have a few of these generators available to choose from, dynamically generate the inputs to collect options, and then use JSON data storage to output the answer to the user on the screen.
+## Intended Functionality
+* User receives a random "picker" from the website to complete
+* User is prompted to provide information the chosen "picker" requires
+* User is given the result of their "picker" and can choose to go again
+* Storing which "pickers" have been completed so repeats are not given to the user
+
+## Desired Skills Development
+* Focus on re-learning some vanilla javascript basics
+* Focus on object oriented javascript functions
+* Learn the basics of the Fetch API in vanilla javascript
 
 ### Helpful Instructions
 
-When developing, make sure to run `npm run scss` so that the scss files compile!
+When developing locally, make sure to run `npm run scss` so that the scss files compile!
