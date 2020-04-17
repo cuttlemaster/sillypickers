@@ -13,6 +13,5 @@ My development team does quarterly showcases where we build small projects with 
 * Focus on object oriented javascript functions
 * Learn the basics of the Fetch API in vanilla javascript
 
-### Helpful Instructions
-
-When developing locally, make sure to run `npm run scss` so that the scss files compile!
+### Developmet Instructions
+* When developing locally, run `npm run scss` to ensure styles are compiled as changes are made.
